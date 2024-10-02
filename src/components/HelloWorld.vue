@@ -35,12 +35,21 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  created : function(){
+    console.log('adabsjdbs');
+      window.Echo.channel('test-broadcast')
+          .listen('test.message', (event) => {
+              console.log(event)
+          })
+  }, 
 }
 </script>
-
+<script>
+</script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 h3 {
   margin: 40px 0 0;
 }
