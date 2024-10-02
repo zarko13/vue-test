@@ -38,8 +38,8 @@ export default {
   },
   created : function(){
     console.log('adabsjdbs');
-      window.Echo.channel('test-broadcast')
-          .listen('test.message', (event) => {
+      window.Echo.private('test-broadcast')
+          .listen('.test.message', (event) => {
               console.log(event)
           })
   }, 
